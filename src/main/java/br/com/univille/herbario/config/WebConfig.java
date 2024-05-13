@@ -16,5 +16,13 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/api/v1/books/{id}")
                 .allowedOrigins("http://localhost:3000")
                 .allowedMethods("GET", "POST", "PUT", "DELETE");
+
+        registry.addMapping("/api/v1/person")
+                .allowedOrigins("http://localhost:3000")
+                .allowedMethods("GET", "POST", "PUT", "DELETE");
+
+        registry.addMapping("/api/v1/person/{id}")
+                .allowedOrigins("http://localhost:3000")
+                .allowedMethods("GET", "POST", "PUT", "DELETE");
     }
 }

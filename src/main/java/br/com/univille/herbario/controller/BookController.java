@@ -3,7 +3,6 @@ package br.com.univille.herbario.controller;
 import br.com.univille.herbario.entity.Book;
 import br.com.univille.herbario.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpLogging;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
