@@ -38,5 +38,36 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true);
+
+        registry.addMapping("/api/v1/apontamentos")
+                .allowedOrigins("http://localhost:3000")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*")
+                .allowCredentials(true);
+
+        registry.addMapping("/api/v1/apontamentos/bydate")
+                .allowedOrigins("http://localhost:3000")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
+
+
 }
+
+/*
+* @Configuration
+   public class CorsConfig {
+
+       @Bean
+       public WebMvcConfigurer corsConfigurer() {
+           return new WebMvcConfigurer() {
+               @Override
+               public void addCorsMappings(CorsRegistry registry) {
+                   registry.addMapping("/api/v1/**") // Adjust the path as needed
+                           .allowedOrigins("http://localhost:3000");
+               }
+           };
+       }
+   }
+* */
